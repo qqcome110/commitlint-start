@@ -23,7 +23,7 @@
 {
   "lint-staged": {
     // 目录范围
-    "src/**/*.js": [
+    "src/**/*.{js, vue}": [
       "prettier --write",
       "eslint --fix",
       "git add"
