@@ -32,10 +32,10 @@
 }
 ```
 
-- 第三步，引入 [`commitlint`](https://github.com/conventional-changelog/commitlint) 与 [`commitlint-config-cz`](https://github.com/whizark/commitlint-config-cz) 来检查提交的信息是否符合要求，这里可以通过添加 `.commitlintrc.js` 到项目根目录
+- 第三步，引入 [`commitlint`](https://github.com/conventional-changelog/commitlint) 与 [`commitlint-config-cz`](https://github.com/whizark/commitlint-config-cz) 来检查提交的信息是否符合要求，这里可以通过添加 `commitlint.config.js` 到项目根目录
 
 ```js
-// .commitlintrc.js
+// commitlint.config.js
 module.exports = {
   extends: [
     'cz'
