@@ -7,7 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "changelog": "standard-version"
+    "release": "standard-version"
   },
   "dependencies": {
     "vue": "^2.6.6"
