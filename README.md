@@ -6,12 +6,12 @@
 
 ```json
 {
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  }
 }
 ```
 
@@ -38,7 +38,7 @@
 // commitlint.config.js
 module.exports = {
   extends: [
-    'cz'
+  'cz'
   ],
   rules: {
   }
@@ -124,14 +124,16 @@ module.exports = {
 
 - 第五步，增加 `changelog` 生成的命令：
 
-官方推荐使用 `standard-version`
+官方推荐使用 `standard-version`，这里我们提供一个交互式的命令，让用户选择性的去更新版本类型，所以使用了编码的形式去发布 `Changelog`, 具体查看 [genChangelog.js](./scripts/genChangelog.js), 添加以下命令，用于生成 `Changelog`
 
 ```json
 {
   "scripts": {
-    "changelog": "standard-version"
+    "dump": "node scripts/genChangelog.js"
   }
 }
 ```
 
-但也可以使用脚本的形式去自定义生成 `changelog`，[参考 genChangelog.js](https://github.com/vuejs/vue-cli/blob/dev/scripts/genChangelog.js)
+> 注： 这里之所以使用了编码的形式去生成 `Changelog`，是因为我们需要去掉默认的头部信息，更新定制化的生成版本号（目前只提供了三个）
+
+~~但也可以使用脚本的形式去自定义生成 `changelog`，[参考 genChangelog.js](https://github.com/vuejs/vue-cli/blob/dev/scripts/genChangelog.js)~~
